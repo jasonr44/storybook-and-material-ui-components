@@ -7,6 +7,8 @@ Simple repo for incremently learning storybook and material ui.
 Some initial commands use to build this app were:
 -  npx create-react-app . --template typescript --use-npm
 -  npx -p @storybook/cli sb init
+-  npm i @material-ui/core fontsource-roboto @material-ui/icons
+    - Requires adding ***import 'fontsource-roboto';*** to the app entry-point file.
 
 ## Additional Learning
 - typescript
