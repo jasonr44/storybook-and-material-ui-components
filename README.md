@@ -5,8 +5,13 @@ Simple repo for incremently learning storybook and material ui.
 ## Initial Build Commands
 
 Some initial commands use to build this app were:
--  npx create-react-app . --template typescript
+-  npx create-react-app . --template typescript --use-npm
 -  npx -p @storybook/cli sb init
+
+## Additional Learning
+- typescript
+- css grid
+- react-testing library
 
 ## Available Scripts
 
