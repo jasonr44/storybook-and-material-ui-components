@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.list-item {
+  font-size: 14px;
+  line-height: 20px;
+  display: grid;
+  grid-template-columns: [checkStart] 5% [taskStart] 90% [pinStart] 5%;
+}
+.list-item.TASK_PINNED .icon-star {
+  color: #2cc5d2;
+}
+.list-item.TASK_ARCHIVED input[type="text"] {
+  color: #aaa;
+}
+.list-item-checkbox {
+  grid-column: [checkStart] / [taskStart];
+}
+.list-item-title {
+  grid-column: [taskStart] / [pinStart];
+}
+.list-item-pin {
+  grid-column-start: [pinStart];
+}

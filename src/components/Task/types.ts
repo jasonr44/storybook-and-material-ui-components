@@ -1,7 +1,7 @@
 export enum TaskState {
-    TASK_INBOX,
-    TASK_PINNED,
-    TASK_ARCHIVED
+    TASK_INBOX = 'TASK_INBOX',
+    TASK_PINNED = 'TASK_PINNED',
+    TASK_ARCHIVED = 'TASK_ARCHIVED'
 };
 
 export interface TaskProps {
@@ -13,6 +13,6 @@ export interface TaskProps {
 
 export interface TaskComponentProps {
     task: TaskProps;
-    onArchiveTask: () => void;
-    onPinTask: () => void;
+    onArchiveTask: (id: string) => void;
+    onPinTask: (id: string) => void;
 };
