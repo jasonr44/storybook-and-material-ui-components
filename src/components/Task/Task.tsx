@@ -11,9 +11,8 @@ const Task: FC<TaskComponentProps> = ({ task: { id, title, state }, onArchiveTas
         <div className={`list-item ${state}`}>
             <Checkbox
                 defaultChecked={state === TaskState.TASK_ARCHIVED}
-                disabled
                 name="checked"
-                onClick={() => onArchiveTask(id)}
+                onChange={() => onArchiveTask(id)}
                 className="list-item-checkbox"
             />
             <div className="list-item-title">
@@ -21,9 +20,8 @@ const Task: FC<TaskComponentProps> = ({ task: { id, title, state }, onArchiveTas
             </div>
             {state !== TaskState.TASK_ARCHIVED && (<Checkbox
                 defaultChecked={state === TaskState.TASK_PINNED}
-                disabled
                 name="checked"
-                onClick={() => onPinTask(id)}
+                onChange={() => onPinTask(id)}
                 className="list-item-pin"
                 icon={<StartBorderOutlined fontSize="small" />}
                 checkedIcon={<StarIcon fontSize="small" color="primary" />}
