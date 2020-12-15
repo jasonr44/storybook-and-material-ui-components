@@ -16,3 +16,7 @@ export interface TaskComponentProps {
     onArchiveTask: (id: string) => void;
     onPinTask: (id: string) => void;
 };
+
+export interface NamedCheckBox extends HTMLElement {
+    name: string;
+};
