@@ -1,8 +1,9 @@
 import React from 'react';
-import Task, { TaskComponentProps, TaskState, NamedCheckBox } from './index';
+import Task, { TaskComponentProps, TaskState } from './index';
 import { render, screen } from '@testing-library/react';
 import userEvent, { TargetElement } from '@testing-library/user-event';
-import { ARCHIVE_CHECKBOX, PIN_CHECKBOX, CHECKBOX_ROLE } from './constants';
+import { CHECKBOX_ROLE } from './constants';
+import { isArchiveCheckbox, isPinCheckbox } from './util';
 
 const STANDARD_TASK_COMPONENT_TASK_PROPS = {
     id: '1',
@@ -22,16 +23,6 @@ const createTaskProps = (state: TaskState) : TaskComponentProps => ({
     },
     ...TASK_ACTIONS
 });
-
-const isArchiveCheckbox = (element: HTMLElement) => {
-    const { name } = element as NamedCheckBox;
-    return (name === ARCHIVE_CHECKBOX) ? element : undefined;
-};
-
-const isPinCheckbox = (element: HTMLElement) => {
-    const { name } = element as NamedCheckBox;
-    return (name === PIN_CHECKBOX) ? element : undefined;
-};
 
 const INBOX_TASK_PROPS = createTaskProps(TaskState.TASK_INBOX);
 

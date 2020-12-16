@@ -19,4 +19,5 @@ export interface TaskComponentProps {
 
 export interface NamedCheckBox extends HTMLElement {
     name: string;
+    checked?: boolean;
 };
