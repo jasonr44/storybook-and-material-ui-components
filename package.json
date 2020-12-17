@@ -24,6 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test-watchAll": "react-scripts test --watchAll",
+    "test-coverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
@@ -56,5 +57,23 @@
     "@storybook/react": "^6.1.10",
     "@types/random-words": "^1.1.0",
     "random-words": "^1.1.1"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "src/*.{js,jsx,ts,tsx}",
+      "!src/reportWebVitals.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "text"
+    ]
   }
 }
