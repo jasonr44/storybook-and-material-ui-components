@@ -12,10 +12,20 @@ code {
     monospace;
 }
 
+.tasklist-wrapper {
+  width: 100%;
+}
+
+.tasklist {
+  display: flex;
+  flex-direction: column;
+}
+
 .list-item {
   font-size: 14px;
   line-height: 20px;
   display: grid;
+  flex: 1;
   grid-template-columns: [checkStart] 5% [taskStart] 90% [pinStart] 5%;
 }
 .list-item.TASK_PINNED .icon-star {

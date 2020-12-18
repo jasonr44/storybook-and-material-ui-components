@@ -33,8 +33,8 @@ const TaskList: FC<TaskListComponentProps> = ({ loading, tasks, onArchiveTask, o
     }
 
     return (
-        <div>
-            <List>
+        <div className='tasklist-wrapper'>
+            <List className='tasklist'>
                 {tasks.sort(({ state: stateA }, { state: stateB }) => {
                     if (statePriorityMap[stateA] < statePriorityMap[stateB]) {
                         return -1;
